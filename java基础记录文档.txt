@@ -1,0 +1,15 @@
+java细节:
+class persion<T>
+{
+	public static void method(T t)
+	{
+		//方法体
+	}
+	public static <Q> void method2(Q q)
+	{
+		//方法体
+	}
+}
+编译过程中，方法一是有问题的，方法二没有问题，
+方法一中是静态方法，编译的时候无法获取到需要动态传过来的T参数，
+方法二中把泛型定义在方法上，调用的时候才确定，所以没有问题。
